@@ -1,6 +1,6 @@
 #nav{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.8);
     font-family: sans-serif;
     line-height: 2.6;
     -webkit-backdrop-filter: blur(10px);
@@ -12,18 +12,21 @@
 ul{
     list-style-type: none;
     width: 100%;
+
 }
-li{
+li {
     display: inline;
     padding: 15px;
+    transition: color 2s;
 }
 a{
-    color:rgba(131,130,132,0.8)
+    color:rgba(131,130,132,0.8) !important;
 }
 
 a:hover{
-    color: azure;
-    text-decoration: none;
+    color: azure!important;
+    text-decoration: none!important;
+
 }
 .box {
     background-color: rgba(255, 255, 255, 0.3);
@@ -50,6 +53,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .container {
@@ -60,13 +64,24 @@ body {
     width: 100%;
 }
 #img1{
-    width: 100%;
+    /*width: 80%!important;*/
+    margin: 10px;
+}
+#img2{
+    /*width: 80%!important;*/
+    margin: 10px;
+}
+#img3{
+    /*width: 80%!important;*/
+    margin: 10px;
 }
 #images{
-    /*width: 80%;*/
+    width: 100%!important;
     text-align: center;
+    position: relative;
+    z-index: -10;
 }
 #main{
-    width:100%;
-
+    width:100% !important;
+    text-align: center;
 }

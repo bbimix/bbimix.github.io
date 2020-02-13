@@ -3,23 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>bbimix</title>
-    <link href="bootstrap.min.css" rel="stylesheet">
     <link href="home.css" type="text/css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <div id="nav">
         <ul >
-            <li ><a >ABOUT</a></li>
-            <li ><a >HISTORY</a></li>
-            <li ><a >SEARCH</a></li>
+            <li ><a ><span>ABOUT</span></a></li>
+            <li ><a ><span>HISTORY</span></a></li>
+            <li ><a ><span>SEARCH</span></a></li>
             <span style="float: right"><li ><a >bbimix</a></li></span>
         </ul>
     </div>
     <div id="main">
         <div id="images">
-            <img src=".idea/img/01.jpg" id="img1">
-            <img src=".idea/img/02.BMP" id="img2">
+            <img src=".idea/img/01.jpg" id="img1" >
+            <img src=".idea/img/01.jpg" id="img2" onmouseover="demo(this)">
+            <img src=".idea/img/01.jpg" id="img3">
+            <script>
+            function demo(obj) {
+                obj.innerHTML("nihao");
+            }
+        </script>
         </div>
     </div>
 </body>
 </html>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        $("#img1").hover(function () {
+            $(this).stop().fadeTo(500,1);
+        },function () {
+            $(this).stop().fadeTo(500,0);
+        });
+    });
+</script>
