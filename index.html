@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>bbimix</title>
-    <link href="home.css" type="text/css" rel="stylesheet">
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/home.css" type="text/css" rel="stylesheet">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
     <div id="nav">
         <ul >
             <li ><a ><span>ABOUT</span></a></li>
-            <li ><a ><span>HISTORY</span></a></li>
+            <li ><a href="history.html"><span>HISTORY</span></a></li>
             <li ><a ><span>SEARCH</span></a></li>
             <span style="float: right"><li ><a >bbimix</a></li></span>
         </ul>
@@ -31,12 +31,3 @@
 </body>
 </html>
 <script src="jquery-3.4.1.min.js"></script>
-<script>
-    $(function () {
-        $("#img1").hover(function () {
-            $(this).stop().fadeTo(500,1);
-        },function () {
-            $(this).stop().fadeTo(500,0);
-        });
-    });
-</script>
