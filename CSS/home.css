@@ -21,6 +21,7 @@ li {
 }
 a{
     color:rgba(131,130,132,0.8) !important;
+    transition: color 0.5s;
 }
 
 a:hover{
@@ -81,7 +82,4 @@ body {
     position: relative;
     z-index: -10;
 }
-#main{
-    width:100% !important;
-    text-align: center;
-}
+
