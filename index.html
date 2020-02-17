@@ -2,32 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
     <title>bbimix</title>
     <link href="CSS/home.css" type="text/css" rel="stylesheet">
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var count=0;
+            $("#images img").mouseover(function () {
+                $("#images img").stop().fadeTo("slow",0);
+            });
+            $("#images img").mouseout(function () {
+                $("#images img").stop().fadeTo("slow",1)
+            });
+            $("#switch").click(function(){
+                count++;
+                // let color = $("body").css("backgroundColor");
+                if(count%2==0){
+                    $("#switch1").fadeOut(1500);
+                    $("#switch2").fadeOut(500);
+                }else{
+                    $("#switch1").fadeIn(500);
+                    $("#switch2").fadeIn(1500);
+                }
+            });
+            $("#switch1").click(function () {
+                $("body").css("backgroundColor","black");
+            });
+            $("#switch2").click(function () {
+                $("body").css("backgroundColor","white");
+            });
 
+        });
+
+    </script>
 </head>
 <body>
-    <div id="nav">
+    <div id="nav" >
         <ul >
             <li ><a ><span>ABOUT</span></a></li>
             <li ><a href="history.html"><span>HISTORY</span></a></li>
             <li ><a ><span>SEARCH</span></a></li>
+            <li><a id="switch">STYLE</a></li>
+            <li><a id="switch1" style="display: none">DARK</a></li>
+            <li><a id="switch2" style="display: none">LIGHT</a></li>
             <span style="float: right"><li ><a >bbimix</a></li></span>
         </ul>
     </div>
-    <div id="main">
-        <div id="images">
-            <img src="img/01.jpg" id="img1" >
-            <img src="img/01.jpg" id="img2" onmouseover="demo(this)">
-            <img src="img/01.jpg" id="img3">
-            <script>
-            function demo(obj) {
-                obj.innerHTML("nihao");
-            }
-        </script>
-        </div>
+    <div id="main" >
+        <div id="images" >
+            <div id="img1d"><img src="img/01.jpg" id="img1" ></div>
+            <div id="img2d"><img src="img/01.jpg"  id="img2"></div>
+            <div id="img3d"><img src="img/01.jpg" id="img3"></div>
+<!--            <script>-->
+<!--                function demo(){-->
+<!--                    // document.getElementById("img2").setAttribute("src","img/03.jpg");-->
+
+<!--                }-->
+<!--            </script>-->
+
     </div>
+
+    </div>
+
 </body>
+
 </html>
 <script src="jquery-3.4.1.min.js"></script>

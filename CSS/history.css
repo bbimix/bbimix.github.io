@@ -2,12 +2,13 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     font-family: sans-serif;
-    line-height: 2.6;
+    line-height: 2.2;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     max-height: 50%;
     /*padding: 20px 40px;*/
     position: fixed;
+    z-index: 600;
 }
 ul{
     list-style-type: none;
@@ -29,12 +30,16 @@ a:hover{
     text-decoration: none!important;
 
 }
+a:active{
+    color: azure!important;
+    text-decoration: none!important;
+}
 #pic1img{
     width:80%;
     left: 10%;
     position: relative;
     top: 45px;
-    z-index: -10;
+    /*z-index: -10;*/
 }
 .pic1{
     position: absolute;
@@ -45,4 +50,21 @@ a:hover{
     line-height: 40px;
     font-size: 50px;
     font-family: Arial sans-serif;
+    /*z-index: -10;*/
+}
+#pic2{
+    /*display: block;*/
+    background-image: url("/img/01.jpg");
+    position: absolute;
+    top:2000px;
+    left: 300px;
+    height: 542px;
+    width: 967px;
+}
+body {
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    margin: 77px;
+    transition: background-color 0.5s;
 }
