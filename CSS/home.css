@@ -1,49 +1,69 @@
-
 #nav{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     font-family: sans-serif;
     line-height: 2.2;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    max-height: 50%;
-    /*padding: 20px 40px;*/
+    -webkit-backdrop-filter: blur(100px);
+    /* backdrop-filter: blur(50px); */
     position: fixed;
-    z-index: 600;
+    z-index: 6000;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-ul{
-    list-style-type: none;
-    width: 100%;
 
+
+#nav::before{
+    backdrop-filter: blur(50px);
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
-li {
-    display: inline;
-    padding: 15px;
+
+
+#nav li {
+    padding: 0 15px 0;
     transition: color 2s;
-    /*float: left;*/
+    list-style-type: none;
 }
-a{
+
+
+#nav .navmenu{
+    display: flex;
+    /* background-color: :rgba(0,0,0,0.8); */
+    /* backdrop-filter: blur(150px); */
+    /* justify-content: space-between; */
+}
+
+
+#nav a{
     color:rgba(131,130,132,0.8) !important;
     transition: color 0.5s;
 }
 
-a:hover{
+
+#nav a:hover{
     color: azure!important;
     text-decoration: none!important;
 
 }
+
+
 a:active{
     color: azure!important;
     text-decoration: none!important;
 }
+
+
 .box {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     font-family: sans-serif;
     text-align: center;
     line-height: 1;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     max-width: 50%;
     max-height: 50%;
     padding: 20px 40px;
@@ -54,98 +74,173 @@ a:active{
 body {
     height: 100%;
     width: 100%;
-    /*max-width: 1920px;*/
-    /*margin: 77px;*/
     transition: background-color 0.5s;
+
 }
 
 
 #main{
-    /*text-align: center;*/
     position: relative;
+    z-index: 2;
+}
 
-    /*align-content: center;*/
-}
-.container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    /*position: relative;*/
-}
-#img1{
-    width: 80%!important;
-    margin: 10px;
 
+#page {
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: none;
 }
-#img2{
-    width: 80%!important;
-    margin: 10px;
 
-    /*z-index: 100;*/
-}
-#img3{
+
+.imgs{
     width: 80%!important;
     margin: 10px;
 }
+
+
+img{
+    margin: 10px 0 10px!important;
+}
+
+
 #images{
-    /*width: 967px;*/
     text-align: center;
     position: relative;
-    /*position: center;*/
-    /*z-index: -10;*/
-    /*left: 25%;*/
     margin: auto;
-    /*overflow: hidden;*/
     padding-left: 5%;
     padding-right: 5%;
 }
-/*#img2div{*/
-/*    height: 600px;*/
-/*}*/
-/*#main{*/
-/*    position: relative;*/
-/*    !*z-index: -20;*!*/
-/*}*/
+
+
+.imgds{
+    position: relative;
+    width: 100%;
+    background-size: 80%!important;
+    background-position: center!important;
+}
+
+
 #img1d{
-    position: relative;
-    width: 100%;
     background: url(../img/03.jpg) center no-repeat ;
-    background-size: 80%;
-    position: relative;
 }
+
+
 #img2d{
-    position: relative;
-    width: 100%;
-    background: url(../img/03.jpg) center no-repeat ;
-    background-size: 80%;
+    background: url(../img/05.jpg) center no-repeat ;
+
 }
+
+
 #img3d{
-    position: relative;
-    width: 100%;
     background: url(../img/03.jpg) center no-repeat ;
-    background-size: 80%;
 }
+
+
 #img4{
     position: absolute;
     opacity: 1;
     margin: 10px;
     left: 105px;
-    /*top: 10px;*/
     z-index: -10;
 }
-/*#img2d span{*/
-/*    width: 967px;*/
-/*    height: 562px;*/
-/*    text-align: center;*/
-/*}*/
-#zh{
-    /*position: absolute;*/
-    /*left: 10%;*/
-    top: 10%;
-    /*z-index: -10;*/
-    color: #eeeeee;
-    font-size:300%;
-    /*margin: 50px;*/
+
+
+#footer1{
+    background-color: black;
+    height: 70vh;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+    position: relative;
 }
+
+
+.ftr{
+    position: fixed!important;
+    top:50%;
+    left: 45%;
+    opacity: 0;
+}
+
+
+
+
+.adidas div{
+    width: 20px;
+    height: 2px;
+    background-color: rgba(131,130,132,0.8);
+    margin: 4px;
+}
+
+
+.adidas{
+    display: none;
+}
+
+
+@media (max-width:768px){
+    .navmenu{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0,0,0,0.6);
+        top: 40px;
+        left: 0;
+        backdrop-filter: blur(150px);
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        transform: translateX(-100%);
+        transition: 1s ;
+        z-index: 100;
+        /* transform: matrix(1, 0, 0, 1, 0, 0); */
+    }
+
+
+    .adidas{
+        display: block;
+    }
+
+
+    .adidas .topline{
+        transition: 1s;
+    }
+
+
+    .adidas .bottomline{
+        transition: 1s;
+    }
+
+
+}
+
+
+.adidas.active div{
+    transition: 0.3s ease-in-out 0.3s;
+}
+
+
+.adidas.active .topline{
+    transform: rotate(45deg) translate(4px,4.5px);
+background-color: #ffffff;
+}
+
+
+.adidas.active .bottomline{
+    transform: rotate(-45deg) translate(4px,-4.5px);
+background-color: #ffffff;
+}
+
+
+.adidas.active .middleline{
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+
+.navmenu.open {
+    transform: translateX(0);
+    /* backdrop-filter: blur(150px); */
+}
+
+

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>bbimix</title>
     <link href="CSS/home.css" type="text/css" rel="stylesheet">
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
@@ -11,10 +11,10 @@
         $(document).ready(function () {
             var count=0;
             $("#images img").mouseover(function () {
-                $("#images img").stop().fadeTo("slow",0);
+                $(this).stop().fadeTo("slow",0);
             });
             $("#images img").mouseout(function () {
-                $("#images img").stop().fadeTo("slow",1)
+                $(this).stop().fadeTo("slow",1)
             });
             $("#switch").click(function(){
                 count++;
@@ -33,38 +33,56 @@
             $("#switch2").click(function () {
                 $("body").css("backgroundColor","white");
             });
-
+            if($(window).scroll(function(){
+                $(".ftr").css({opacity:0.005*(-1800+$(window).scrollTop())})
+            })){
+                
+            }
         });
 
+    </script>
+    <script>
+        $(document).ready(function(){
+            const adidas = document.querySelector(".adidas");
+            const navmenu = document.querySelector(".navmenu");
+            adidas.addEventListener("click",()=>{
+            adidas.classList.toggle("active");
+            navmenu.classList.toggle("open");
+        })
+
+        });
     </script>
 </head>
 <body>
     <div id="nav" >
-        <ul >
-            <li ><a ><span>ABOUT</span></a></li>
-            <li ><a href="history.html"><span>HISTORY</span></a></li>
-            <li ><a ><span>SEARCH</span></a></li>
-            <li><a id="switch">STYLE</a></li>
-            <li><a id="switch1" style="display: none">DARK</a></li>
-            <li><a id="switch2" style="display: none">LIGHT</a></li>
-            <span style="float: right"><li ><a >bbimix</a></li></span>
+        <ul class="navmenu">
+            <li class="lftbtn"><a >ABOUT</a></li>
+            <li class="lftbtn"><a >HISTORY</a></li>
+            <li class="lftbtn"><a >SEARCH</a></li>
+            <li class="lftbtn"><a id="switch">STYLE</a></li>
+            <li class="lftbtn"><a id="switch1" style="display: none">DARK</a></li>
+            <li class="lftbtn"><a id="switch2" style="display: none">LIGHT</a></li>
         </ul>
+        <li class="logo"><a>bbimix</a></li>
+        <div class="adidas">
+            <div class="topline"></div>
+            <div class="middleline"></div>
+            <div class="bottomline"></div>
+        </div>
     </div>
-    <div id="main" >
-        <div id="images" >
-            <div id="img1d"><img src="img/01.jpg" id="img1" ></div>
-            <div id="img2d"><img src="img/01.jpg"  id="img2"></div>
-            <div id="img3d"><img src="img/01.jpg" id="img3"></div>
-<!--            <script>-->
-<!--                function demo(){-->
-<!--                    // document.getElementById("img2").setAttribute("src","img/03.jpg");-->
-
-<!--                }-->
-<!--            </script>-->
-
+    <div id="page">
+        <div id="main" >
+            <div id="images" >
+                <div id="img1d" class="imgds"><a style="display: block"><img src="img/01.jpg" id="img1" class="imgs"></a></div>
+                <div id="img2d" class="imgds"><img src="img/04.jpg"  id="img2" class="imgs"></div>
+                <div id="img3d" class="imgds"><img src="img/01.jpg" id="img3" class="imgs"></div>
+            </div>
+        </div>
+        <footer id="footer1" >
+            <h1 class="ftr" style="color: snow;text-align: center; position: relative;">bbimix</h1>
+        </footer>
     </div>
 
-    </div>
 
 </body>
 
