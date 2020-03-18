@@ -161,6 +161,10 @@ img{
     top:50%;
     left: 45%;
     opacity: 0;
+    transition: all 1s;
+    color: snow;
+    text-align: center;
+    position: relative; 
 }
 
 
@@ -221,6 +225,9 @@ img{
     }
 
 
+    .ftr{
+        font-size: small!important;
+    }
 }
 
 
