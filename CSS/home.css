@@ -17,6 +17,9 @@
 #nav::before{
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(150px);
+    -o-backdrop-filter: blur(150px);
+    -moz-backdrop-filter: blur(150px);
+    -ms-backdrop-filter: blur(150px);
     content: "";
     z-index: -1;
     position: absolute;
@@ -193,6 +196,9 @@ img{
         background-color: rgb(0,0,0,0.6);
         top: 40px;
         left: 0;
+        -o-backdrop-filter: blur(150px);
+        -moz-backdrop-filter: blur(150px);
+        -ms-backdrop-filter: blur(150px);
         -webkit-backdrop-filter: blur(150px);
         backdrop-filter: blur(150px);
         text-align: right;
