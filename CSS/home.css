@@ -180,6 +180,8 @@ img{
 
 @media (max-width:768px){
     .navmenu{
+        font-size: large;
+        font-weight: 600;
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -187,13 +189,18 @@ img{
         top: 40px;
         left: 0;
         backdrop-filter: blur(150px);
-        align-items: center;
+        text-align: right;
         flex-direction: column;
         justify-content: flex-start;
         transform: translateX(-100%);
         transition: 1s ;
         z-index: 100;
         /* transform: matrix(1, 0, 0, 1, 0, 0); */
+    }
+
+
+    .navmenu li{
+        margin: 20px 15px;
     }
 
 
