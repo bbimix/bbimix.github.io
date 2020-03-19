@@ -56,10 +56,19 @@
         $(document).ready(function(){
             const adidas = document.querySelector(".adidas");
             const navmenu = document.querySelector(".navmenu");
+            const menuli = document.querySelectorAll(".navmenu li");
             adidas.addEventListener("click",()=>{
             //点击三条滑出菜单栏。
             adidas.classList.toggle("active");
             navmenu.classList.toggle("open");
+
+            menuli.forEach((item,index) => {
+                if(item.style.animation){
+                    item.style.animation = "";
+                }else{
+                    item.style.animation = `0.3s ease-in slipIn forwards ${index * 0.2 + 0.5}s`;
+                }
+            });
         })
 
         });

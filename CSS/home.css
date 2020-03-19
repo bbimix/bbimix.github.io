@@ -193,7 +193,7 @@ img{
         position: absolute;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(0,0,0,0.6);
+        background-color: rgb(0,0,0,0.65);
         top: 40px;
         left: 0;
         -o-backdrop-filter: blur(150px);
@@ -234,6 +234,32 @@ img{
     .ftr{
         font-size: small!important;
     }
+
+
+    #images{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .navmenu li{
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+
+
+    @keyframes slipIn {
+        from{
+            transform: translateX(-250px);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+
 }
 
 
