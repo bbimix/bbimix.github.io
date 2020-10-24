@@ -1,6 +1,6 @@
-#nav{
+#nav {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     font-family: sans-serif;
     line-height: 2.2;
     /* -webkit-backdrop-filter: blur(150px); */
@@ -14,12 +14,12 @@
 }
 
 
-#nav::before{
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(150px);
-    -o-backdrop-filter: blur(150px);
-    -moz-backdrop-filter: blur(150px);
-    -ms-backdrop-filter: blur(150px);
+#nav::before {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    -o-backdrop-filter: blur(30px);
+    -moz-backdrop-filter: blur(30px);
+    -ms-backdrop-filter: blur(30px);
     content: "";
     z-index: -1;
     position: absolute;
@@ -35,7 +35,7 @@
 }
 
 
-#nav .navmenu{
+#nav .navmenu {
     display: flex;
     /* background-color: :rgba(0,0,0,0.8); */
     /* backdrop-filter: blur(150px); */
@@ -43,22 +43,23 @@
 }
 
 
-#nav a{
-    color:rgba(131,130,132,0.8) !important;
+#nav a {
+    color: rgba(131, 130, 132, 0.8) !important;
     transition: color 0.5s;
 }
 
 
-#nav a:hover{
-    color: azure!important;
-    text-decoration: none!important;
+#nav a:hover {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
 
 }
 
 
-a:active{
-    color: azure!important;
-    text-decoration: none!important;
+a:active {
+    color: white !important;
+    text-decoration: none !important;
 }
 
 
@@ -82,74 +83,37 @@ body {
 
 }
 
-
-#main{
-    position: relative;
-    z-index: 2;
-}
-
-
 #page {
-    overflow-y: auto;
-    overflow-x: hidden;
+    position: absolute;
+    top: 100px;
+    width: 100vw;
     transform: none;
 }
 
 
-.imgs{
-    width: 80%!important;
-    margin: 10px;
+#mainContainer {
+    width: 100vw;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
 }
 
 
-img{
-    margin: 10px 0 10px!important;
-}
-
-
-#images{
-    text-align: center;
+#images {
+    width: 70vw;
     position: relative;
     margin: auto;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 
-.imgds{
+.imagePartContainer {
     position: relative;
     width: 100%;
-    background-size: 80%!important;
-    background-position: center!important;
+    background-color: white;
 }
 
 
-#img1d{
-    background: url(../img/03.jpg) center no-repeat ;
-}
-
-
-#img2d{
-    background: url(../img/05.jpg) center no-repeat ;
-
-}
-
-
-#img3d{
-    background: url(../img/03.jpg) center no-repeat ;
-}
-
-
-#img4{
-    position: absolute;
-    opacity: 1;
-    margin: 10px;
-    left: 105px;
-    z-index: -10;
-}
-
-
-#footer1{
+#footer1 {
     background-color: black;
     height: 70vh;
     width: 100%;
@@ -159,41 +123,39 @@ img{
 }
 
 
-.ftr{
-    position: fixed!important;
-    top:50%;
+.ftr {
+    position: fixed !important;
+    top: 50%;
     left: 45%;
     opacity: 0;
     transition: all 1s;
     color: snow;
     text-align: center;
-    position: relative; 
+    position: relative;
 }
 
 
-
-
-.adidas div{
+.adidas div {
     width: 20px;
     height: 2px;
-    background-color: rgba(131,130,132,0.8);
+    background-color: rgba(131, 130, 132, 0.8);
     margin: 4px;
 }
 
 
-.adidas{
+.adidas {
     display: none;
 }
 
 
-@media (max-width:768px){
-    .navmenu{
+@media (max-width: 768px) {
+    .navmenu {
         font-size: large;
         font-weight: 600;
         position: absolute;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(0,0,0,0.65);
+        background-color: rgb(0, 0, 0, 0.65);
         top: 40px;
         left: 0;
         -o-backdrop-filter: blur(150px);
@@ -205,55 +167,55 @@ img{
         flex-direction: column;
         justify-content: flex-start;
         transform: translateX(-100%);
-        transition: 1s ;
+        transition: 1s;
         z-index: 100;
         /* transform: matrix(1, 0, 0, 1, 0, 0); */
     }
 
 
-    .navmenu li{
+    .navmenu li {
         margin: 20px 15px;
     }
 
 
-    .adidas{
+    .adidas {
         display: block;
     }
 
 
-    .adidas .topline{
+    .adidas .topline {
         transition: 1s;
     }
 
 
-    .adidas .bottomline{
+    .adidas .bottomline {
         transition: 1s;
     }
 
 
-    .ftr{
-        font-size: small!important;
+    .ftr {
+        font-size: small !important;
     }
 
 
-    #images{
+    #images {
         padding-left: 0;
         padding-right: 0;
     }
 
 
-    .navmenu li{
+    .navmenu li {
         transform: translateX(-250px);
         opacity: 0;
     }
 
 
     @keyframes slipIn {
-        from{
+        from {
             transform: translateX(-250px);
             opacity: 0;
         }
-        to{
+        to {
             transform: translateX(0);
             opacity: 1;
         }
@@ -263,24 +225,24 @@ img{
 }
 
 
-.adidas.active div{
+.adidas.active div {
     transition: 0.3s ease-in-out 0.3s;
 }
 
 
-.adidas.active .topline{
-    transform: rotate(45deg) translate(4px,4.5px);
-background-color: #ffffff;
+.adidas.active .topline {
+    transform: rotate(45deg) translate(4px, 4.5px);
+    background-color: #ffffff;
 }
 
 
-.adidas.active .bottomline{
-    transform: rotate(-45deg) translate(4px,-4.5px);
-background-color: #ffffff;
+.adidas.active .bottomline {
+    transform: rotate(-45deg) translate(4px, -4.5px);
+    background-color: #ffffff;
 }
 
 
-.adidas.active .middleline{
+.adidas.active .middleline {
     opacity: 0;
     transition: 1s ease-in-out;
 }
@@ -289,6 +251,59 @@ background-color: #ffffff;
 .navmenu.open {
     transform: translateX(0);
     /* backdrop-filter: blur(150px); */
+}
+
+#curtain {
+    z-index: 100;
+    mix-blend-mode: screen;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+
+    color: black;
+}
+
+#curtainText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    animation: open 2s forwards;
+}
+
+@keyframes open {
+    from {
+        font-size: 100px
+    }
+    to {
+        font-size: 1000px
+    }
+}
+
+#img1Text{
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 2em;
+}
+
+#img1Title{
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+#imageDescription1{
+    position: absolute;
+    height: 100%;
+    width: 69%;
+}
+
+#imagePhoto1{
+    position: absolute;
+    height: 100%;
+    width: 31%;
+    right: 0;
 }
 
 
