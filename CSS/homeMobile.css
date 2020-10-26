@@ -9,6 +9,10 @@
         top: 40px;
         left: 0;
         backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        -o-backdrop-filter: blur(30px);
+        -moz-backdrop-filter: blur(30px);
+        -ms-backdrop-filter: blur(30px);
         text-align: right;
         flex-direction: column;
         justify-content: flex-start;
