@@ -51,6 +51,7 @@
     #images {
         padding-left: 0;
         padding-right: 0;
+        width: 95vw;
     }
 
 
@@ -60,7 +61,12 @@
     }
 
     .imgTitle{
-        font-size: 10px;
+        font-size: 0px;
+    }
+
+    .imageDescription{
+        width: 0;
+        flex: 0;
     }
 
     @keyframes slipIn {

@@ -164,13 +164,13 @@ body {
 
 .adidas.active .topline {
     transform: rotate(45deg) translate(4px, 4.5px);
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
 }
 
 
 .adidas.active .bottomline {
     transform: rotate(-45deg) translate(4px, -4.5px);
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
 }
 
 
