@@ -114,6 +114,7 @@ body {
     width: 100%;
     background-color: white;
     margin: 100px 0 100px;
+    transition: all 0.5s;
 }
 
 #images:before, #images:after {
