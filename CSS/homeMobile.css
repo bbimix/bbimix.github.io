@@ -1,0 +1,75 @@
+@media (max-width: 768px) {
+    .navmenu {
+        font-size: large;
+        font-weight: 600;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.65);
+        top: 40px;
+        left: 0;
+        -o-backdrop-filter: blur(150px);
+        -moz-backdrop-filter: blur(150px);
+        -ms-backdrop-filter: blur(150px);
+        -webkit-backdrop-filter: blur(150px);
+        backdrop-filter: blur(150px);
+        text-align: right;
+        flex-direction: column;
+        justify-content: flex-start;
+        transform: translateX(-100%);
+        transition: 1s;
+        z-index: 100;
+        /* transform: matrix(1, 0, 0, 1, 0, 0); */
+    }
+
+
+    .navmenu li {
+        margin: 20px 15px;
+    }
+
+
+    .adidas {
+        display: block;
+    }
+
+
+    .adidas .topline {
+        transition: 1s;
+    }
+
+
+    .adidas .bottomline {
+        transition: 1s;
+    }
+
+
+    .ftr {
+        font-size: small !important;
+    }
+
+
+    #images {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .navmenu li {
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+
+
+    @keyframes slipIn {
+        from {
+            transform: translateX(-250px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+
+}

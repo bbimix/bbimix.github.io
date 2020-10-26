@@ -3,8 +3,8 @@
     background-color: rgba(255, 255, 255, 0.7);
     font-family: sans-serif;
     line-height: 2.2;
-    /* -webkit-backdrop-filter: blur(150px); */
-    /* backdrop-filter: blur(150px); */
+    /*-webkit-backdrop-filter: blur(150px);*/
+    /*backdrop-filter: blur(150px);*/
     position: fixed;
     z-index: 6000;
     height: 40px;
@@ -96,6 +96,7 @@ body {
     position: relative;
     z-index: 2;
     min-height: 100vh;
+    /*height: 200vh;*/
 }
 
 
@@ -103,15 +104,22 @@ body {
     width: 70vw;
     position: relative;
     margin: auto;
+    overflow: hidden;
 }
 
 
 .imagePartContainer {
     position: relative;
+    display: flex;
     width: 100%;
     background-color: white;
+    margin: 100px 0 100px;
 }
 
+#images:before, #images:after {
+    content: " ";
+    display: table;
+}
 
 #footer1 {
     background-color: black;
@@ -145,83 +153,6 @@ body {
 
 .adidas {
     display: none;
-}
-
-
-@media (max-width: 768px) {
-    .navmenu {
-        font-size: large;
-        font-weight: 600;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgb(0, 0, 0, 0.65);
-        top: 40px;
-        left: 0;
-        -o-backdrop-filter: blur(150px);
-        -moz-backdrop-filter: blur(150px);
-        -ms-backdrop-filter: blur(150px);
-        -webkit-backdrop-filter: blur(150px);
-        backdrop-filter: blur(150px);
-        text-align: right;
-        flex-direction: column;
-        justify-content: flex-start;
-        transform: translateX(-100%);
-        transition: 1s;
-        z-index: 100;
-        /* transform: matrix(1, 0, 0, 1, 0, 0); */
-    }
-
-
-    .navmenu li {
-        margin: 20px 15px;
-    }
-
-
-    .adidas {
-        display: block;
-    }
-
-
-    .adidas .topline {
-        transition: 1s;
-    }
-
-
-    .adidas .bottomline {
-        transition: 1s;
-    }
-
-
-    .ftr {
-        font-size: small !important;
-    }
-
-
-    #images {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-
-    .navmenu li {
-        transform: translateX(-250px);
-        opacity: 0;
-    }
-
-
-    @keyframes slipIn {
-        from {
-            transform: translateX(-250px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-
 }
 
 
@@ -282,28 +213,79 @@ body {
     }
 }
 
-#img1Text{
+#img1Text {
     font-size: 20px;
     font-weight: bold;
     text-indent: 2em;
 }
 
-#img1Title{
+#img1Title {
     font-size: 100px;
     font-weight: bolder;
 }
 
-#imageDescription1{
-    position: absolute;
+#imageDescription1 {
     height: 100%;
-    width: 69%;
+    flex: 1;
 }
 
-#imagePhoto1{
-    position: absolute;
+#imagePhoto2 {
+    margin: 0;
     height: 100%;
-    width: 31%;
-    right: 0;
+}
+
+#img2Text {
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 2em;
+}
+
+#img2Title {
+    font-size: 100px;
+    font-weight: bolder;
+    margin: 0;
+    float: right;
+}
+
+#imageDescription2 {
+    height: 100%;
+    flex: 1;
+    /*float: right;*/
+}
+
+#imagePhoto2 {
+    margin: 0;
+    height: 100%;
+}
+
+#img2d {
+    float: right;
+}
+
+#img3d {
+    float: right;
+}
+
+#imageDescription3{
+    height: 100%;
+    flex: 1;
+}
+
+#imagePhoto3 {
+    margin: 0;
+    height: 100%;
+}
+
+#img3Text {
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 2em;
+}
+
+#img3Title {
+    font-size: 100px;
+    font-weight: bolder;
+    margin: 0;
 }
 
 
