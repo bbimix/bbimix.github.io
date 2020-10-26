@@ -16,10 +16,6 @@
 
 #nav::before {
     backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    -o-backdrop-filter: blur(30px);
-    -moz-backdrop-filter: blur(30px);
-    -ms-backdrop-filter: blur(30px);
     content: "";
     z-index: -1;
     position: absolute;
@@ -38,7 +34,7 @@
 #nav .navmenu {
     display: flex;
     /* background-color: :rgba(0,0,0,0.8); */
-    /* backdrop-filter: blur(150px); */
+    /* backdrop-filter: blur(150px);*/
     /* justify-content: space-between; */
 }
 

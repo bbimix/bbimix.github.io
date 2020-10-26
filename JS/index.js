@@ -18,11 +18,14 @@ $(document).ready(function () {
         }
     });
 
+    $(window).resize(function (){
+        $(".navmenu").css("background-color", "rgba(0, 0, 0,0)");
+    })
     //style dark and light.
     $("#switch1").click(function () {
         $("body").css("backgroundColor", "black");
         $("#nav").css("background-color", "rgba(0, 0, 0, 0.7)");
-        $(".navmenu").css("background-color", "rgba(0, 0, 0, 0.7)");
+        if ($("#page").width()<900){$(".navmenu").css("background-color", "rgba(0, 0, 0, 0.7)");}
         $("#footer1").css("background-color", "rgb(30,30,30)");
         $(".ftr").css("color", "black");
         $(".imagePartContainer").css("background-color", "black");
@@ -33,7 +36,7 @@ $(document).ready(function () {
     $("#switch2").click(function () {
         $("body").css("backgroundColor", "white");
         $("#nav").css("background-color", "rgba(255, 255, 255, 0.7)");
-        $(".navmenu").css("background-color", "rgba(255, 255, 255, 0.7)");
+        if ($(window).width()<900){$(".navmenu").css("background-color", "rgba(255, 255, 255, 0.7)");}
         $("#footer1").css("background-color", "black");
         $(".ftr").css("color", "white");
         $(".imagePartContainer").css("background-color", "white");
