@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>bbimix</title>
     <link href="CSS/home.css" type="text/css" rel="stylesheet">
     <style>
+
+
+
         * {
             margin: 0;
             padding: 0;
@@ -18,9 +22,9 @@
             height: 100vh;
             width: 100vw;
             background: white;
-
             color: black;
         }
+
 
         #curtainText {
             position: absolute;
@@ -32,6 +36,10 @@
             font-family: Serif;
         }
 
+        #curtainText1{
+            display: none;
+        }
+
         @keyframes open {
             from {
                 font-size: 100px
@@ -40,6 +48,7 @@
                 font-size: 1000px
             }
         }
+
 
         #bgimg {
             width: 100vw;
@@ -54,12 +63,31 @@
                 height: 100vh;
                 width: auto;
             }
+
+            #curtainText{
+                display: none;
+            }
+
+            #curtainText1{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 100px;
+                animation: open 5s forwards linear;
+                font-family: Serif;
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
 <a href="pages/home.html">
-    <div id="curtain"><span id="curtainText">bbimix</span></div>
+    <div id="curtain">
+        <span id="curtainText">bbimix</span>
+        <span id="curtainText1">X</span>
+    </div>
+
 </a>
 
 <div id="imageContainer">
